@@ -1,0 +1,10 @@
+{
+  "name": "VANANSH - AI Tree Doctor",
+  "description": "Expert AI Tree Doctor & Agro-Botanist for analyzing plant leaf photos, diagnosing diseases and deficiencies, and providing precision watering, organic fertilization, and treatment.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
