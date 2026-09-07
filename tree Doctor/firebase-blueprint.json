@@ -1,0 +1,57 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User profile with their plant leaf diagnoses and saved garden plants",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "subcollections": {
+        "diagnoses": {
+          "title": "Plant Leaf Diagnoses",
+          "description": "Saved diagnosis results for leaf analysis",
+          "type": "object",
+          "properties": {
+            "createdAt": { "type": "string", "format": "date-time" },
+            "plantNameEnglish": { "type": "string" },
+            "plantNameGujarati": { "type": "string" },
+            "scientificName": { "type": "string" },
+            "isHealthy": { "type": "boolean" },
+            "conditionName": { "type": "string" },
+            "symptoms": { "type": "array", "items": { "type": "string" } },
+            "description": { "type": "string" },
+            "waterFrequency": { "type": "string" },
+            "waterQuantity": { "type": "string" },
+            "waterInstructions": { "type": "string" },
+            "fertilizerType": { "type": "string" },
+            "fertilizerDosage": { "type": "string" },
+            "fertilizerMethod": { "type": "string" },
+            "careAndTreatment": { "type": "array", "items": { "type": "string" } },
+            "imageUrl": { "type": "string" }
+          },
+          "required": ["createdAt", "plantNameEnglish", "isHealthy", "conditionName"]
+        },
+        "garden": {
+          "title": "Virtual Garden Plants",
+          "description": "Saved garden and tree plants with schedule reminders",
+          "type": "object",
+          "properties": {
+            "plantName": { "type": "string" },
+            "plantNameGujarati": { "type": "string" },
+            "species": { "type": "string" },
+            "location": { "type": "string" },
+            "lastWatered": { "type": "string", "format": "date-time" },
+            "nextWatering": { "type": "string", "format": "date-time" },
+            "lastFertilized": { "type": "string", "format": "date-time" },
+            "notes": { "type": "string" },
+            "status": { "type": "string" }
+          },
+          "required": ["plantName"]
+        }
+      }
+    }
+  }
+}
